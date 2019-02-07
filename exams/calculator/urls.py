@@ -3,5 +3,6 @@ from . import views
 
 app_name='cal'
 urlpatterns = [
-    path('<int:number>', views.multi_table, name='multi'),
+    path('input/',views.input,name='input'),
+    path('', views.multi_table, name='multi'),
 ]

@@ -6,7 +6,7 @@ from django.template import loader
 def multi_table(request, number):
     num = number
     result=[]
-    index=[]
     for i in range(13):
-        result.append(num*i)
-    return render(request, 'table.html', {'num':num},{'result':result})
+        reserv = ""+str(num)+" x "+str(i)+" = "+str(num*i)+"    : "
+        result.append(reserv)
+    return HttpResponse(result)

@@ -5,4 +5,8 @@ from django.template import loader
 # Create your views here.
 def multi_table(request, number):
     num = number
-    return render(request, 'table.html', {'number':number})
+    result=[]
+    index=[]
+    for i in range(13):
+        result.append(num*i)
+    return render(request, 'table.html', {'num':num},{'result':result})

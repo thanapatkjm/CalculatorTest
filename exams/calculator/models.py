@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Number_times(models.Model):
+        number = models.IntegerField()
+        times = models.IntegerField()
+        

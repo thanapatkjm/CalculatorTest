@@ -1,1 +1,6 @@
-<h1>{{result.name}}</h1>
+<h1>Table of {{num}}</h1>
+{% for index in result %}
+    <h3>{{ index }}</h3>
+{% endfor %}
+
+<h2>Number of times calling this table = {{times}} </h2>

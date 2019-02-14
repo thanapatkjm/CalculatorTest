@@ -1,3 +1,2 @@
 14/02/2562
- - Fix Error of last time (Edit all number to numbers)
- - Can Show Table With Number of times access this table
+ - Can show Stat of all accessed table

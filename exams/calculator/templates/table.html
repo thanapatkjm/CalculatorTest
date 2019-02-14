@@ -4,3 +4,8 @@
 {% endfor %}
 
 <h2>Number of times calling this table = {{times}} </h2>
+
+
+<form action="{% url 'cal:input' %}" method="get">
+<input type="submit" value="Back">
+</form>

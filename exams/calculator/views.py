@@ -9,6 +9,10 @@ from .models import Number_times
 def input(request):
     return render(request,'input.html')
 
+def stat(request):
+    data = Number_times.objects.values().all()
+    return render(request,'stat.html',{'data':data})
+
 def multi_table(request):
     num = request.POST['input']
     try:

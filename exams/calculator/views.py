@@ -11,11 +11,13 @@ def input(request):
 
 def Number_Order(request):
     data = Number_times.objects.values().all().order_by('number')
-    return render(request,'stat.html',{'data':data})
+    fields_name = Number_times._meta.fields
+    return render(request,'stat.html',{'data':data,'fields_name':fields_name})
 
 def stat(request):
+    fields_name = Number_times._meta.fields
     data = Number_times.objects.values().all()
-    return render(request,'stat.html',{'data':data})
+    return render(request,'stat.html',{'data':data,'fields_name':fields_name})
 
 def multi_table(request):
     num = request.POST['input']

@@ -1,8 +1,30 @@
-<h2>Number     :     Times </h2>
-{% for index in data %}
-    <h3> {{ index.number}}   &nbsp&nbsp  : &nbsp&nbsp  {{index.times}}</h3>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
 
+<body>
+
+<table border="1">
+    <tr>
+        {% for field in fields_name %}
+            <th>{{field.name}}</th>
+        {% endfor%}
+    </tr>
+    {% for index in data%}
+    <div style="overflow-x:auto;"></div>
+    <tr>
+        <td>{{index.id}}</td>
+        <td>{{index.number}}</td>
+        <td>{{index.times}}</td>
+    </tr>
+    </div>
+    {% endfor%}
+
+</table>
+
+</body>
 <form action="{% url 'cal:input' %}" method="get">
 <input type="submit" value="Back">
 </form>

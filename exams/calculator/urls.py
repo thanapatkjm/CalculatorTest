@@ -4,5 +4,5 @@ from . import views
 app_name='cal'
 urlpatterns = [
     path('input/',views.input,name='input'),
-    path('', views.multi_table, name='multi'),
+    path('multi/', views.multi_table, name='multi'),
 ]

@@ -1,8 +1,12 @@
 <h2>Number     :     Times </h2>
 {% for index in data %}
-    <h3>{{ index.number}}   &nbsp&nbsp  : &nbsp&nbsp  {{index.times}}</h3>
+    <h3> {{ index.number}}   &nbsp&nbsp  : &nbsp&nbsp  {{index.times}}</h3>
 {% endfor %}
 
 <form action="{% url 'cal:input' %}" method="get">
 <input type="submit" value="Back">
+</form>
+
+<form action="{% url 'cal:NOrder' %}" method="get">
+<input type="submit" value="OrderByNumber">
 </form>

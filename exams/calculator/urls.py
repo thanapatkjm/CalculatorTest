@@ -6,4 +6,5 @@ urlpatterns = [
     path('input/',views.input,name='input'),
     path('multi/', views.multi_table, name='multi'),
     path('stat/', views.stat, name='stat'),
+    path('order/', views.Number_Order, name='NOrder'),
 ]
